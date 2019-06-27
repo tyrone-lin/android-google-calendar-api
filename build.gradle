@@ -25,10 +25,6 @@ android {
 
 }
 
-configurations {
-    all*.exclude group: 'com.google.guava'
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -39,7 +35,6 @@ dependencies {
     api('com.google.apis:google-api-services-calendar:v3-rev305-1.23.0') {
         exclude group: 'org.apache.httpcomponents'
     }
-    api 'com.google.guava:guava:28.0-android'
 
     //noinspection GradleDynamicVersion
     api "com.infrastructure:library:+"
